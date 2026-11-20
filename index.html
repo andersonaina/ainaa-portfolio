@@ -1,390 +1,1099 @@
-<!DOCTYPE html>
+<!doctype html>
 <html lang="fr">
-<head>
-<meta charset="UTF-8">
-<meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>Aina Anderson — IT Support / SysAdmin</title>
-<link rel="preconnect" href="https://fonts.googleapis.com">
-<link href="https://fonts.googleapis.com/css2?family=Bricolage+Grotesque:opsz,wght@12..96,400;12..96,600;12..96,800&family=DM+Mono:wght@400;500&display=swap" rel="stylesheet">
-<style>
-  :root{
-    --bg:#F4F2FB;
-    --card:#FFFFFF;
-    --ink:#1C1A2E;
-    --muted:#6B6880;
-    --line:#E3E0F0;
-    --violet:#7C5CFF;
-    --lime:#C8F169;
-    --peach:#FFB59A;
-    --sky:#A9D8FF;
-    --butter:#FFE58A;
-    --r:26px;
-  }
-  *{box-sizing:border-box; margin:0; padding:0;}
-  html{scroll-behavior:smooth;}
-  [id]{scroll-margin-top:90px;}
-  body{background:var(--bg); color:var(--ink); font-family:'Bricolage Grotesque', sans-serif; line-height:1.5; overflow-x:hidden;}
-  ::selection{background:var(--lime);}
-  a{color:inherit;}
-  .mono{font-family:'DM Mono', monospace;}
-  .wrap{max-width:1180px; margin:0 auto; padding:0 24px;}
-  @media (max-width:600px){ .wrap{padding:0 16px;} }
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Aina Anderson — IT Support / SysAdmin</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Bricolage+Grotesque:opsz,wght@12..96,400;12..96,600;12..96,800&family=DM+Mono:wght@400;500&display=swap"
+      rel="stylesheet"
+    />
+    <style>
+      :root {
+        --bg: #f4f2fb;
+        --card: #ffffff;
+        --ink: #1c1a2e;
+        --muted: #6b6880;
+        --line: #e3e0f0;
+        --violet: #7c5cff;
+        --lime: #c8f169;
+        --peach: #ffb59a;
+        --sky: #a9d8ff;
+        --butter: #ffe58a;
+        --r: 26px;
+      }
+      * {
+        box-sizing: border-box;
+        margin: 0;
+        padding: 0;
+      }
+      html {
+        scroll-behavior: smooth;
+      }
+      [id] {
+        scroll-margin-top: 90px;
+      }
+      body {
+        background: var(--bg);
+        color: var(--ink);
+        font-family: "Bricolage Grotesque", sans-serif;
+        line-height: 1.5;
+        overflow-x: hidden;
+      }
+      ::selection {
+        background: var(--lime);
+      }
+      a {
+        color: inherit;
+      }
+      .mono {
+        font-family: "DM Mono", monospace;
+      }
+      .wrap {
+        max-width: 1180px;
+        margin: 0 auto;
+        padding: 0 24px;
+      }
+      @media (max-width: 600px) {
+        .wrap {
+          padding: 0 16px;
+        }
+      }
 
-  /* ---------- NAV (floating pill) ---------- */
-  header{position:sticky; top:14px; z-index:50; margin-top:14px;}
-  nav{display:flex; align-items:center; justify-content:space-between; gap:12px;
-      background:#ffffffcc; backdrop-filter:blur(14px); border:1px solid var(--line);
-      border-radius:100px; padding:8px 8px 8px 20px; box-shadow:0 8px 30px -18px #1c1a2e55;}
-  .logo{font-weight:800; font-size:18px; letter-spacing:-.02em; text-decoration:none; display:flex; align-items:center; gap:10px;}
-  .logo i{width:28px; height:28px; border-radius:9px; background:var(--violet); color:#fff; display:grid; place-items:center; font-style:normal; font-size:12px;}
-  .navlinks{display:flex; gap:4px;}
-  .navlinks a{text-decoration:none; font-size:14px; padding:8px 14px; border-radius:100px; transition:background .2s;}
-  .navlinks a:hover{background:var(--bg);}
-  @media (max-width:820px){ .navlinks{display:none;} }
-  .btn{display:inline-flex; align-items:center; gap:8px; text-decoration:none; font-weight:600; font-size:14.5px;
-       padding:12px 20px; border-radius:100px; transition:transform .2s, box-shadow .2s, background .2s;}
-  .btn:hover{transform:translateY(-2px);}
-  .btn-dark{background:var(--ink); color:#fff;}
-  .btn-dark:hover{box-shadow:0 10px 24px -10px var(--ink);}
-  .btn-light{background:#fff; border:1px solid var(--line);}
-  .btn-lime{background:var(--lime); color:var(--ink);}
+      /* ---------- NAV (floating pill) ---------- */
+      header {
+        position: sticky;
+        top: 14px;
+        z-index: 50;
+        margin-top: 14px;
+      }
+      nav {
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+        gap: 12px;
+        background: #ffffffcc;
+        backdrop-filter: blur(14px);
+        border: 1px solid var(--line);
+        border-radius: 100px;
+        padding: 8px 8px 8px 20px;
+        box-shadow: 0 8px 30px -18px #1c1a2e55;
+      }
+      .logo {
+        font-weight: 800;
+        font-size: 18px;
+        letter-spacing: -0.02em;
+        text-decoration: none;
+        display: flex;
+        align-items: center;
+        gap: 10px;
+      }
+      .logo i {
+        width: 28px;
+        height: 28px;
+        border-radius: 9px;
+        background: var(--violet);
+        color: #fff;
+        display: grid;
+        place-items: center;
+        font-style: normal;
+        font-size: 12px;
+      }
+      .navlinks {
+        display: flex;
+        gap: 4px;
+      }
+      .navlinks a {
+        text-decoration: none;
+        font-size: 14px;
+        padding: 8px 14px;
+        border-radius: 100px;
+        transition: background 0.2s;
+      }
+      .navlinks a:hover {
+        background: var(--bg);
+      }
+      @media (max-width: 820px) {
+        .navlinks {
+          display: none;
+        }
+      }
+      .btn {
+        display: inline-flex;
+        align-items: center;
+        gap: 8px;
+        text-decoration: none;
+        font-weight: 600;
+        font-size: 14.5px;
+        padding: 12px 20px;
+        border-radius: 100px;
+        transition:
+          transform 0.2s,
+          box-shadow 0.2s,
+          background 0.2s;
+      }
+      .btn:hover {
+        transform: translateY(-2px);
+      }
+      .btn-dark {
+        background: var(--ink);
+        color: #fff;
+      }
+      .btn-dark:hover {
+        box-shadow: 0 10px 24px -10px var(--ink);
+      }
+      .btn-light {
+        background: #fff;
+        border: 1px solid var(--line);
+      }
+      .btn-lime {
+        background: var(--lime);
+        color: var(--ink);
+      }
 
-  /* ---------- BENTO ---------- */
-  .bento{display:grid; grid-template-columns:repeat(12, 1fr); gap:14px; margin-top:28px;}
-  .tile{background:var(--card); border-radius:var(--r); padding:28px; border:1px solid var(--line); position:relative; overflow:hidden;}
-  .tile h3{font-size:13px; font-family:'DM Mono'; font-weight:500; text-transform:uppercase; letter-spacing:.06em; color:var(--muted); margin-bottom:14px;}
-  .c-12{grid-column:span 12;} .c-8{grid-column:span 8;} .c-7{grid-column:span 7;} .c-6{grid-column:span 6;}
-  .c-5{grid-column:span 5;} .c-4{grid-column:span 4;} .c-3{grid-column:span 3;}
-  @media (max-width:900px){ .c-8,.c-7,.c-6,.c-5,.c-4{grid-column:span 12;} .c-3{grid-column:span 6;} }
-  @media (max-width:520px){ .c-3{grid-column:span 12;} }
+      /* ---------- BENTO ---------- */
+      .bento {
+        display: grid;
+        grid-template-columns: repeat(12, 1fr);
+        gap: 14px;
+        margin-top: 28px;
+      }
+      .tile {
+        background: var(--card);
+        border-radius: var(--r);
+        padding: 28px;
+        border: 1px solid var(--line);
+        position: relative;
+        overflow: hidden;
+      }
+      .tile h3 {
+        font-size: 13px;
+        font-family: "DM Mono";
+        font-weight: 500;
+        text-transform: uppercase;
+        letter-spacing: 0.06em;
+        color: var(--muted);
+        margin-bottom: 14px;
+      }
+      .c-12 {
+        grid-column: span 12;
+      }
+      .c-8 {
+        grid-column: span 8;
+      }
+      .c-7 {
+        grid-column: span 7;
+      }
+      .c-6 {
+        grid-column: span 6;
+      }
+      .c-5 {
+        grid-column: span 5;
+      }
+      .c-4 {
+        grid-column: span 4;
+      }
+      .c-3 {
+        grid-column: span 3;
+      }
+      @media (max-width: 900px) {
+        .c-8,
+        .c-7,
+        .c-6,
+        .c-5,
+        .c-4 {
+          grid-column: span 12;
+        }
+        .c-3 {
+          grid-column: span 6;
+        }
+      }
+      @media (max-width: 520px) {
+        .c-3 {
+          grid-column: span 12;
+        }
+      }
 
-  .reveal{opacity:0; transform:translateY(16px) scale(.98); transition:opacity .6s ease, transform .6s cubic-bezier(.2,.8,.2,1);}
-  .reveal.in{opacity:1; transform:none;}
+      .reveal {
+        opacity: 0;
+        transform: translateY(16px) scale(0.98);
+        transition:
+          opacity 0.6s ease,
+          transform 0.6s cubic-bezier(0.2, 0.8, 0.2, 1);
+      }
+      .reveal.in {
+        opacity: 1;
+        transform: none;
+      }
 
-  /* hero tile */
-  .hero{background:var(--ink); color:#fff; border:none; padding:44px; min-height:420px; display:flex; flex-direction:column; justify-content:space-between;}
-  @media (max-width:600px){ .hero{padding:28px;} }
-  .pill{display:inline-flex; align-items:center; gap:8px; background:#ffffff14; border:1px solid #ffffff22; padding:7px 14px; border-radius:100px; font-size:13px; width:fit-content;}
-  .pill b{width:8px; height:8px; border-radius:50%; background:var(--lime); box-shadow:0 0 0 0 var(--lime); animation:ping 2s infinite;}
-  @keyframes ping{0%{box-shadow:0 0 0 0 #c8f169aa;} 100%{box-shadow:0 0 0 10px #c8f16900;}}
-  .hero h1{font-size:clamp(36px,5.4vw,68px); line-height:1; font-weight:800; letter-spacing:-.035em; margin:26px 0 18px; max-width:15ch;}
-  .hero h1 .hl{background:var(--lime); color:var(--ink); padding:0 .18em; border-radius:.2em; display:inline-block; transform:rotate(-1.5deg);}
-  .hero p{color:#c9c6da; font-size:17px; max-width:50ch;}
-  .hero .actions{display:flex; gap:10px; flex-wrap:wrap; margin-top:26px;}
-  .hero .btn-light{background:transparent; color:#fff; border-color:#ffffff33;}
-  .blob{position:absolute; border-radius:50%; filter:blur(50px); opacity:.55; pointer-events:none;}
+      /* hero tile */
+      .hero {
+        background: var(--ink);
+        color: #fff;
+        border: none;
+        padding: 44px;
+        min-height: 420px;
+        display: flex;
+        flex-direction: column;
+        justify-content: space-between;
+      }
+      @media (max-width: 600px) {
+        .hero {
+          padding: 28px;
+        }
+      }
+      .pill {
+        display: inline-flex;
+        align-items: center;
+        gap: 8px;
+        background: #ffffff14;
+        border: 1px solid #ffffff22;
+        padding: 7px 14px;
+        border-radius: 100px;
+        font-size: 13px;
+        width: fit-content;
+      }
+      .pill b {
+        width: 8px;
+        height: 8px;
+        border-radius: 50%;
+        background: var(--lime);
+        box-shadow: 0 0 0 0 var(--lime);
+        animation: ping 2s infinite;
+      }
+      @keyframes ping {
+        0% {
+          box-shadow: 0 0 0 0 #c8f169aa;
+        }
+        100% {
+          box-shadow: 0 0 0 10px #c8f16900;
+        }
+      }
+      .hero h1 {
+        font-size: clamp(36px, 5.4vw, 68px);
+        line-height: 1;
+        font-weight: 800;
+        letter-spacing: -0.035em;
+        margin: 26px 0 18px;
+        max-width: 15ch;
+      }
+      .hero h1 .hl {
+        background: var(--lime);
+        color: var(--ink);
+        padding: 0 0.18em;
+        border-radius: 0.2em;
+        display: inline-block;
+        transform: rotate(-1.5deg);
+      }
+      .hero p {
+        color: #c9c6da;
+        font-size: 17px;
+        max-width: 50ch;
+      }
+      .hero .actions {
+        display: flex;
+        gap: 10px;
+        flex-wrap: wrap;
+        margin-top: 26px;
+      }
+      .hero .btn-light {
+        background: transparent;
+        color: #fff;
+        border-color: #ffffff33;
+      }
+      .blob {
+        position: absolute;
+        border-radius: 50%;
+        filter: blur(50px);
+        opacity: 0.55;
+        pointer-events: none;
+      }
 
-  /* avatar tile */
-  .me{background:var(--violet); color:#fff; border:none; display:flex; flex-direction:column; justify-content:space-between; min-height:420px;}
-  .me .avatar{width:120px; height:120px; border-radius:36px; background:#fff; color:var(--violet); display:grid; place-items:center; font-weight:800; font-size:46px; letter-spacing:-.04em; transform:rotate(-6deg); box-shadow:10px 10px 0 #ffffff33; transition:transform .4s;}
-  .me:hover .avatar{transform:rotate(4deg) scale(1.04);}
-  .me h2{font-size:34px; font-weight:800; letter-spacing:-.03em; line-height:1.05;}
-  .me .loc{margin-top:8px; opacity:.85; font-size:15px;}
-  .me .tags{display:flex; gap:6px; flex-wrap:wrap; margin-top:16px;}
-  .me .tags span{background:#ffffff26; padding:5px 11px; border-radius:100px; font-size:12.5px;}
+      /* avatar tile */
+      .me {
+        background: var(--violet);
+        color: #fff;
+        border: none;
+        display: flex;
+        flex-direction: column;
+        justify-content: space-between;
+        min-height: 420px;
+      }
+      .me .avatar {
+        width: 120px;
+        height: 120px;
+        border-radius: 36px;
+        background: #fff;
+        color: var(--violet);
+        display: grid;
+        place-items: center;
+        font-weight: 800;
+        font-size: 46px;
+        letter-spacing: -0.04em;
+        transform: rotate(-6deg);
+        box-shadow: 10px 10px 0 #ffffff33;
+        transition: transform 0.4s;
+      }
+      .me:hover .avatar {
+        transform: rotate(4deg) scale(1.04);
+      }
+      .me h2 {
+        font-size: 34px;
+        font-weight: 800;
+        letter-spacing: -0.03em;
+        line-height: 1.05;
+      }
+      .me .loc {
+        margin-top: 8px;
+        opacity: 0.85;
+        font-size: 15px;
+      }
+      .me .tags {
+        display: flex;
+        gap: 6px;
+        flex-wrap: wrap;
+        margin-top: 16px;
+      }
+      .me .tags span {
+        background: #ffffff26;
+        padding: 5px 11px;
+        border-radius: 100px;
+        font-size: 12.5px;
+      }
 
-  /* stat tiles */
-  .stat{display:flex; flex-direction:column; justify-content:space-between; min-height:170px; border:none;}
-  .stat strong{font-size:clamp(36px,4vw,52px); font-weight:800; letter-spacing:-.04em; line-height:1;}
-  .stat span{font-size:14.5px; font-weight:600; opacity:.8;}
-  .bg-lime{background:var(--lime);} .bg-peach{background:var(--peach);} .bg-sky{background:var(--sky);} .bg-butter{background:var(--butter);}
+      /* stat tiles */
+      .stat {
+        display: flex;
+        flex-direction: column;
+        justify-content: space-between;
+        min-height: 170px;
+        border: none;
+      }
+      .stat strong {
+        font-size: clamp(36px, 4vw, 52px);
+        font-weight: 800;
+        letter-spacing: -0.04em;
+        line-height: 1;
+      }
+      .stat span {
+        font-size: 14.5px;
+        font-weight: 600;
+        opacity: 0.8;
+      }
+      .bg-lime {
+        background: var(--lime);
+      }
+      .bg-peach {
+        background: var(--peach);
+      }
+      .bg-sky {
+        background: var(--sky);
+      }
+      .bg-butter {
+        background: var(--butter);
+      }
 
-  /* section labels */
-  .label{grid-column:span 12; display:flex; align-items:center; gap:12px; margin-top:44px; padding:0 6px;}
-  .label .n{font-family:'DM Mono'; font-size:13px; background:var(--ink); color:#fff; border-radius:100px; padding:4px 10px;}
-  .label h2{font-size:clamp(28px,3.4vw,40px); font-weight:800; letter-spacing:-.03em;}
+      /* section labels */
+      .label {
+        grid-column: span 12;
+        display: flex;
+        align-items: center;
+        gap: 12px;
+        margin-top: 44px;
+        padding: 0 6px;
+      }
+      .label .n {
+        font-family: "DM Mono";
+        font-size: 13px;
+        background: var(--ink);
+        color: #fff;
+        border-radius: 100px;
+        padding: 4px 10px;
+      }
+      .label h2 {
+        font-size: clamp(28px, 3.4vw, 40px);
+        font-weight: 800;
+        letter-spacing: -0.03em;
+      }
 
-  /* about */
-  .about p{font-size:18px; color:#3d3a52; margin-bottom:14px; max-width:60ch;}
-  .about strong{color:var(--ink); background:linear-gradient(transparent 62%, var(--butter) 62%);}
-  .kv{display:flex; justify-content:space-between; gap:12px; padding:11px 0; border-bottom:1px dashed var(--line); font-size:14.5px;}
-  .kv:last-child{border-bottom:none;}
-  .kv span:first-child{color:var(--muted);}
-  .kv span:last-child{font-weight:600; text-align:right;}
-  .dot-ok::before{content:""; display:inline-block; width:8px; height:8px; border-radius:50%; background:#3BB54A; margin-right:7px;}
+      /* about */
+      .about p {
+        font-size: 18px;
+        color: #3d3a52;
+        margin-bottom: 14px;
+        max-width: 60ch;
+      }
+      .about strong {
+        color: var(--ink);
+        background: linear-gradient(transparent 62%, var(--butter) 62%);
+      }
+      .kv {
+        display: flex;
+        justify-content: space-between;
+        gap: 12px;
+        padding: 11px 0;
+        border-bottom: 1px dashed var(--line);
+        font-size: 14.5px;
+      }
+      .kv:last-child {
+        border-bottom: none;
+      }
+      .kv span:first-child {
+        color: var(--muted);
+      }
+      .kv span:last-child {
+        font-weight: 600;
+        text-align: right;
+      }
+      .dot-ok::before {
+        content: "";
+        display: inline-block;
+        width: 8px;
+        height: 8px;
+        border-radius: 50%;
+        background: #3bb54a;
+        margin-right: 7px;
+      }
 
-  /* skills */
-  .skill .icon{width:52px; height:52px; border-radius:16px; display:grid; place-items:center; font-family:'DM Mono'; font-weight:500; font-size:14px; margin-bottom:18px;}
-  .skill h4{font-size:22px; font-weight:800; letter-spacing:-.02em; margin-bottom:16px;}
-  .chips{display:flex; flex-wrap:wrap; gap:7px;}
-  .chip{font-size:13.5px; padding:7px 13px; border-radius:100px; background:var(--bg); border:1px solid var(--line);}
-  .chip.sub{background:transparent; border-style:dashed; color:var(--muted); font-size:12.5px;}
-  .group{margin-bottom:12px;}
-  .group > .chip{background:var(--ink); color:#fff; border-color:var(--ink); margin-bottom:7px; display:inline-block;}
+      /* skills */
+      .skill .icon {
+        width: 52px;
+        height: 52px;
+        border-radius: 16px;
+        display: grid;
+        place-items: center;
+        font-family: "DM Mono";
+        font-weight: 500;
+        font-size: 14px;
+        margin-bottom: 18px;
+      }
+      .skill h4 {
+        font-size: 22px;
+        font-weight: 800;
+        letter-spacing: -0.02em;
+        margin-bottom: 16px;
+      }
+      .chips {
+        display: flex;
+        flex-wrap: wrap;
+        gap: 7px;
+      }
+      .chip {
+        font-size: 13.5px;
+        padding: 7px 13px;
+        border-radius: 100px;
+        background: var(--bg);
+        border: 1px solid var(--line);
+      }
+      .chip.sub {
+        background: transparent;
+        border-style: dashed;
+        color: var(--muted);
+        font-size: 12.5px;
+      }
+      .group {
+        margin-bottom: 12px;
+      }
+      .group > .chip {
+        background: var(--ink);
+        color: #fff;
+        border-color: var(--ink);
+        margin-bottom: 7px;
+        display: inline-block;
+      }
 
-  /* experience */
-  .job{display:grid; grid-template-columns:auto 1fr; gap:20px; transition:transform .25s, box-shadow .25s;}
-  .job:hover{transform:translateY(-3px); box-shadow:0 18px 40px -24px #1c1a2e66;}
-  .job .badge{width:56px; height:56px; border-radius:18px; display:grid; place-items:center; font-weight:800; font-size:18px;}
-  .job .date{font-family:'DM Mono'; font-size:12.5px; color:var(--muted);}
-  .job h4{font-size:21px; font-weight:800; letter-spacing:-.02em; line-height:1.2; margin:4px 0 2px;}
-  .job .org{font-weight:600; color:var(--violet); margin-bottom:14px;}
-  .job ul{list-style:none;}
-  .job li{font-size:14.5px; color:#3d3a52; padding:6px 0 6px 22px; position:relative;}
-  .job li::before{content:""; position:absolute; left:4px; top:14px; width:7px; height:7px; border-radius:2px; background:var(--violet); transform:rotate(45deg);}
-  @media (max-width:520px){ .job{grid-template-columns:1fr;} }
+      /* experience */
+      .job {
+        display: grid;
+        grid-template-columns: auto 1fr;
+        gap: 20px;
+        transition:
+          transform 0.25s,
+          box-shadow 0.25s;
+      }
+      .job:hover {
+        transform: translateY(-3px);
+        box-shadow: 0 18px 40px -24px #1c1a2e66;
+      }
+      .job .badge {
+        width: 56px;
+        height: 56px;
+        border-radius: 18px;
+        display: grid;
+        place-items: center;
+        font-weight: 800;
+        font-size: 18px;
+      }
+      .job .date {
+        font-family: "DM Mono";
+        font-size: 12.5px;
+        color: var(--muted);
+      }
+      .job h4 {
+        font-size: 21px;
+        font-weight: 800;
+        letter-spacing: -0.02em;
+        line-height: 1.2;
+        margin: 4px 0 2px;
+      }
+      .job .org {
+        font-weight: 600;
+        color: var(--violet);
+        margin-bottom: 14px;
+      }
+      .job ul {
+        list-style: none;
+      }
+      .job li {
+        font-size: 14.5px;
+        color: #3d3a52;
+        padding: 6px 0 6px 22px;
+        position: relative;
+      }
+      .job li::before {
+        content: "";
+        position: absolute;
+        left: 4px;
+        top: 14px;
+        width: 7px;
+        height: 7px;
+        border-radius: 2px;
+        background: var(--violet);
+        transform: rotate(45deg);
+      }
+      @media (max-width: 520px) {
+        .job {
+          grid-template-columns: 1fr;
+        }
+      }
 
-  /* education */
-  .edu{display:flex; gap:24px; align-items:center; flex-wrap:wrap;}
-  .edu .yr{font-size:clamp(40px,5vw,64px); font-weight:800; letter-spacing:-.04em; line-height:1; color:var(--violet);}
-  .edu h4{font-size:24px; font-weight:800; letter-spacing:-.02em;}
-  .edu .org{font-weight:600; margin:2px 0 10px;}
-  .edu p{color:#3d3a52; max-width:60ch;}
+      /* education */
+      .edu {
+        display: flex;
+        gap: 24px;
+        align-items: center;
+        flex-wrap: wrap;
+      }
+      .edu .yr {
+        font-size: clamp(40px, 5vw, 64px);
+        font-weight: 800;
+        letter-spacing: -0.04em;
+        line-height: 1;
+        color: var(--violet);
+      }
+      .edu h4 {
+        font-size: 24px;
+        font-weight: 800;
+        letter-spacing: -0.02em;
+      }
+      .edu .org {
+        font-weight: 600;
+        margin: 2px 0 10px;
+      }
+      .edu p {
+        color: #3d3a52;
+        max-width: 60ch;
+      }
 
-  /* references */
-  .ref h4{font-size:19px; font-weight:800; letter-spacing:-.02em; line-height:1.2;}
-  .ref .role{font-size:13.5px; color:var(--muted); margin:4px 0 16px;}
-  .ref a{display:block; text-decoration:none; font-family:'DM Mono'; font-size:12.5px; padding:8px 12px; background:var(--bg); border-radius:12px; margin-top:6px; overflow-wrap:anywhere; transition:background .2s;}
-  .ref a:hover{background:var(--lime);}
+      /* references */
+      .ref h4 {
+        font-size: 19px;
+        font-weight: 800;
+        letter-spacing: -0.02em;
+        line-height: 1.2;
+      }
+      .ref .role {
+        font-size: 13.5px;
+        color: var(--muted);
+        margin: 4px 0 16px;
+      }
+      .ref a {
+        display: block;
+        text-decoration: none;
+        font-family: "DM Mono";
+        font-size: 12.5px;
+        padding: 8px 12px;
+        background: var(--bg);
+        border-radius: 12px;
+        margin-top: 6px;
+        overflow-wrap: anywhere;
+        transition: background 0.2s;
+      }
+      .ref a:hover {
+        background: var(--lime);
+      }
 
-  /* contact */
-  .contact{background:var(--lime); border:none; padding:56px 44px; text-align:center;}
-  @media (max-width:600px){ .contact{padding:40px 22px;} }
-  .contact h2{font-size:clamp(34px,6vw,72px); font-weight:800; letter-spacing:-.04em; line-height:1;}
-  .contact p{font-size:17px; margin:16px auto 30px; max-width:48ch;}
-  .contact .links{display:flex; gap:10px; justify-content:center; flex-wrap:wrap;}
-  .contact .btn{overflow-wrap:anywhere;}
+      /* contact */
+      .contact {
+        background: var(--lime);
+        border: none;
+        padding: 56px 44px;
+        text-align: center;
+      }
+      @media (max-width: 600px) {
+        .contact {
+          padding: 40px 22px;
+        }
+      }
+      .contact h2 {
+        font-size: clamp(34px, 6vw, 72px);
+        font-weight: 800;
+        letter-spacing: -0.04em;
+        line-height: 1;
+      }
+      .contact p {
+        font-size: 17px;
+        margin: 16px auto 30px;
+        max-width: 48ch;
+      }
+      .contact .links {
+        display: flex;
+        gap: 10px;
+        justify-content: center;
+        flex-wrap: wrap;
+      }
+      .contact .btn {
+        overflow-wrap: anywhere;
+      }
 
-  footer{display:flex; justify-content:space-between; flex-wrap:wrap; gap:10px; padding:28px 6px 36px; font-size:13.5px; color:var(--muted);}
+      footer {
+        display: flex;
+        justify-content: space-between;
+        flex-wrap: wrap;
+        gap: 10px;
+        padding: 28px 6px 36px;
+        font-size: 13.5px;
+        color: var(--muted);
+      }
 
-  @media (prefers-reduced-motion: reduce){ *{animation:none !important; transition:none !important;} .reveal{opacity:1; transform:none;} }
-</style>
-</head>
-<body>
-<div class="wrap">
+      @media (prefers-reduced-motion: reduce) {
+        * {
+          animation: none !important;
+          transition: none !important;
+        }
+        .reveal {
+          opacity: 1;
+          transform: none;
+        }
+      }
+    </style>
+  </head>
+  <body>
+    <div class="wrap">
+      <header>
+        <nav>
+          <a href="#" class="logo"><i>AA</i>aina.anderson</a>
+          <div class="navlinks">
+            <a href="#about">Profil</a>
+            <a href="#skills">Compétences</a>
+            <a href="#exp">Expérience</a>
+            <a href="#edu">Formation</a>
+            <a href="#refs">Références</a>
+          </div>
+          <a
+            href="mailto:aina.anderson@ainaa.tech"
+            class="btn btn-dark"
+            style="padding: 10px 18px"
+            >Contact ✦</a
+          >
+        </nav>
+      </header>
 
-<header>
-  <nav>
-    <a href="#" class="logo"><i>AA</i>aina.anderson</a>
-    <div class="navlinks">
-      <a href="#about">Profil</a>
-      <a href="#skills">Compétences</a>
-      <a href="#exp">Expérience</a>
-      <a href="#edu">Formation</a>
-      <a href="#refs">Références</a>
+      <main class="bento">
+        <!-- HERO -->
+        <div class="tile hero c-8 reveal">
+          <div
+            class="blob"
+            style="
+              width: 260px;
+              height: 260px;
+              background: var(--violet);
+              right: -60px;
+              top: -80px;
+            "
+          ></div>
+          <div
+            class="blob"
+            style="
+              width: 200px;
+              height: 200px;
+              background: var(--lime);
+              right: 120px;
+              bottom: -120px;
+              opacity: 0.25;
+            "
+          ></div>
+          <div style="position: relative">
+            <span class="pill"><b></b>En poste chez Harvel-System</span>
+            <h1>
+              Je garde les <span class="hl">infrastructures</span> en ligne,
+              disponibles et sécurisées.
+            </h1>
+            <p>
+              IT Support & SysAdmin basé à Antananarivo, Madagascar. Windows /
+              Linux, Active Directory, réseaux et virtualisation — du poste
+              utilisateur à la salle serveur.
+            </p>
+            <div class="actions">
+              <a href="#exp" class="btn btn-lime">Voir le parcours →</a>
+              <a href="#contact" class="btn btn-light">Me contacter</a>
+            </div>
+          </div>
+        </div>
+
+        <div class="tile me c-4 reveal">
+          <div class="avatar">AA</div>
+          <div>
+            <h2>Aina<br />Anderson</h2>
+            <div class="loc">📍 Talatamaty, Antananarivo</div>
+            <div class="tags">
+              <span>Responsable Exploitation</span><span>SysAdmin</span
+              ><span>IT Support</span>
+            </div>
+          </div>
+        </div>
+
+        <div class="tile stat bg-lime c-3 reveal">
+          <strong>4+ ans</strong><span>support & infra IT</span>
+        </div>
+        <div class="tile stat bg-peach c-3 reveal">
+          <strong>5</strong><span>structures accompagnées</span>
+        </div>
+        <div class="tile stat bg-sky c-3 reveal">
+          <strong>Win / Lx</strong><span>environnements administrés</span>
+        </div>
+        <div class="tile stat bg-butter c-3 reveal">
+          <strong>M365</strong><span>EntraID · Intune</span>
+        </div>
+
+        <!-- ABOUT -->
+        <div class="label reveal" id="about">
+          <span class="n">01</span>
+          <h2>Profil</h2>
+        </div>
+        <div class="tile about c-7 reveal">
+          <h3>À propos</h3>
+          <p>
+            Depuis plus de quatre ans, mon travail consiste à faire en sorte que
+            tout fonctionne, sans que personne n'ait à s'en soucier. Serveurs,
+            réseaux, postes sous <strong>Windows comme sous Linux</strong> : je
+            les <strong>installe, les entretiens et les sécurise</strong> pour
+            que les équipes puissent avancer sans interruption.
+          </p>
+          <p>
+            Face à une panne, j'aime en comprendre la cause plutôt que de la
+            contourner. Qu'il s'agisse de débloquer un utilisateur ou de monter
+            une nouvelle infrastructure, je suis le dossier de bout en bout,
+            <strong>en autonomie</strong> quand il le faut et
+            <strong>en équipe</strong> le reste du temps.
+          </p>
+        </div>
+        <div class="tile c-5 reveal">
+          <h3>En bref</h3>
+          <div class="kv">
+            <span>Localisation</span><span>Talatamaty, Antananarivo</span>
+          </div>
+          <div class="kv">
+            <span>Statut</span
+            ><span class="dot-ok">En poste — Harvel-System</span>
+          </div>
+          <div class="kv">
+            <span>Systèmes</span><span>Windows / Linux</span>
+          </div>
+          <div class="kv">
+            <span>Cloud identité</span><span>EntraID · Intune</span>
+          </div>
+          <div class="kv">
+            <span>Virtualisation</span><span>VMware ESXi</span>
+          </div>
+          <div class="kv">
+            <span>Site</span><span>ainaa-portfolio.vercel.app</span>
+          </div>
+        </div>
+
+        <!-- SKILLS -->
+        <div class="label reveal" id="skills">
+          <span class="n">02</span>
+          <h2>Spécialisations</h2>
+        </div>
+        <div class="tile skill c-4 reveal">
+          <div class="icon bg-sky">SR</div>
+          <h4>Systèmes & réseaux</h4>
+          <div class="chips">
+            <span class="chip">Administration Windows / Linux</span>
+            <span class="chip"
+              >Virtualisation (VMware ESXi, Hyper-V, Proxmox)</span
+            >
+            <span class="chip">Réseaux LAN, WAN, VLAN, TCP/IP, VPN</span>
+            <span class="chip">DNS, DHCP, Active Directory</span>
+            <span class="chip">Sécurité des systèmes et réseaux</span>
+          </div>
+        </div>
+        <div class="tile skill c-4 reveal">
+          <div class="icon bg-peach">AI</div>
+          <h4>Administration & infra</h4>
+          <div class="group">
+            <span class="chip">Serveurs Windows Server / Linux Server</span>
+          </div>
+          <div class="group">
+            <span class="chip">Sauvegarde & reprise après sinistre</span>
+            <div class="chips">
+              <span class="chip sub">Veeam B&R</span
+              ><span class="chip sub">Ghost Symantec</span>
+            </div>
+          </div>
+        </div>
+        <div class="tile skill c-4 reveal">
+          <div class="icon bg-butter">M365</div>
+          <h4>Microsoft 365</h4>
+          <div class="group">
+            <span class="chip">EntraID (ex Azure AD)</span>
+            <div class="chips">
+              <span class="chip sub">Utilisateurs & groupes</span
+              ><span class="chip sub">Rôles RBAC</span>
+            </div>
+          </div>
+          <div class="group">
+            <span class="chip">Intune</span>
+            <div class="chips">
+              <span class="chip sub">Enrôlement des postes</span
+              ><span class="chip sub">MDM/MAM, politiques de sécurité</span>
+            </div>
+          </div>
+          <div class="group">
+            <span class="chip">Gestion environnement hybride</span>
+          </div>
+        </div>
+
+        <!-- EXPERIENCE -->
+        <div class="label reveal" id="exp">
+          <span class="n">03</span>
+          <h2>Expérience</h2>
+        </div>
+        <div class="tile job c-12 reveal">
+          <div class="badge" style="background: var(--violet); color: #fff">
+            HS
+          </div>
+          <div>
+            <div class="date">
+              Août 2026 — Aujourd'hui ·
+              <span style="color: #3bb54a">● en poste</span>
+            </div>
+            <h4>Consultant Responsable Exploitation</h4>
+            <div class="org">Harvel-System</div>
+            <ul>
+              <li>
+                Coordination technique des projets et suivi des autres
+                intervenants (planning, échéances, blocages)
+              </li>
+              <li>
+                Revue de code et contrôle qualité avant validation et mise en
+                production
+              </li>
+              <li>
+                Administration des réseaux, serveurs et équipements (routeurs,
+                switches, Wi-Fi), sauvegardes et supervision
+              </li>
+              <li>
+                Sécurité des systèmes : gestion des accès et permissions,
+                protection des données clients
+              </li>
+              <li>
+                Préparation et pilotage des déploiements et mises en production
+              </li>
+              <li>
+                Support technique et interventions à distance ou sur site chez
+                les clients
+              </li>
+              <li>
+                Développement et maintenance d'applications, documentation
+                technique et reporting
+              </li>
+            </ul>
+          </div>
+        </div>
+        <div class="tile job c-6 reveal">
+          <div class="badge bg-lime">GS</div>
+          <div>
+            <div class="date">Avril 2025 — 13 Fév 2026</div>
+            <h4>Technicien de support IT (N1/N2)</h4>
+            <div class="org">Groupe SODIAT S.A</div>
+            <ul>
+              <li>
+                Administration Active Directory : création/suppression de
+                comptes, GPO, gestion des accès
+              </li>
+              <li>
+                Configuration et dépannage des équipements réseau : switches,
+                routeurs, pare-feu
+              </li>
+              <li>
+                Gestion des tickets via GLPI, participation aux projets
+                d'évolution de l'infrastructure
+              </li>
+              <li>
+                Support opérationnel sur environnements virtualisés (VMware
+                ESXi)
+              </li>
+              <li>
+                Support technique N1/N2 : diagnostic, résolution et escalade des
+                incidents
+              </li>
+            </ul>
+          </div>
+        </div>
+        <div class="tile job c-6 reveal">
+          <div class="badge bg-sky">TR</div>
+          <div>
+            <div class="date">Jan 2023 — Sep 2024</div>
+            <h4>Technicien informatique</h4>
+            <div class="org">TRANSRAM SARLU</div>
+            <ul>
+              <li>
+                Mise en place et administration d'un serveur Windows Server,
+                comptes AD, droits et partages réseau
+              </li>
+              <li>Déploiement et maintenance des postes clients Windows</li>
+              <li>
+                Résolution d'incidents liés à l'authentification, aux accès
+                réseau et aux ressources partagées
+              </li>
+            </ul>
+          </div>
+        </div>
+        <div class="tile job c-6 reveal">
+          <div class="badge bg-peach">AR</div>
+          <div>
+            <div class="date">Avril 2022 — Juillet 2022</div>
+            <h4>Junior développeur web — React / Laravel</h4>
+            <div class="org">Org. AfricaRice Madagascar</div>
+            <ul>
+              <li>
+                Application web React (front) / Laravel (back) avec API REST
+              </li>
+              <li>Gestion des bases MySQL et des relations</li>
+              <li>
+                Implémentation de l'authentification et de la gestion des
+                utilisateurs
+              </li>
+            </ul>
+          </div>
+        </div>
+        <div class="tile job c-6 reveal">
+          <div class="badge bg-butter">SMA</div>
+          <div>
+            <div class="date">Oct 2022 — Août 2023</div>
+            <h4>Stagiaire développeur WinDev</h4>
+            <div class="org">Société Municipale d'Assainissement (SMA)</div>
+            <ul>
+              <li>
+                Conception d'un Système d'Information, analyse des besoins et
+                spécifications
+              </li>
+              <li>
+                Modélisation des données et gestion des bases (HFSQL / SQL)
+              </li>
+              <li>
+                Mise en place d'un serveur Ubuntu pour l'hébergement du SI,
+                assistance aux utilisateurs
+              </li>
+            </ul>
+          </div>
+        </div>
+
+        <!-- EDUCATION -->
+        <div class="label reveal" id="edu">
+          <span class="n">04</span>
+          <h2>Formation</h2>
+        </div>
+        <div class="tile edu c-12 reveal">
+          <div class="yr">2022–23</div>
+          <div style="flex: 1; min-width: 240px">
+            <h4>Licence en Informatique</h4>
+            <div class="org">ESMIA Mahamasina</div>
+            <p>
+              Formation axée sur les systèmes et réseaux, avec des bases solides
+              en administration serveurs et en développement web. Acquisition
+              des fondamentaux en infrastructures IT et services réseau.
+            </p>
+          </div>
+        </div>
+
+        <!-- REFERENCES -->
+        <div class="label reveal" id="refs">
+          <span class="n">05</span>
+          <h2>Références</h2>
+        </div>
+        <div class="tile ref c-4 reveal">
+          <h4>Rado Razafinimanana</h4>
+          <div class="role">Coordonateur SI — Groupe SODIAT</div>
+          <a href="tel:+261383356300">+261 38 33 563 00</a>
+          <a href="mailto:coodonateur.si@sodiat.mg">coodonateur.si@sodiat.mg</a>
+        </div>
+        <div class="tile ref c-4 reveal">
+          <h4>Sitraka Andrianariveloarinosy</h4>
+          <div class="role">Responsable Informatique — Groupe SODIAT</div>
+          <a href="tel:+261340241013">+261 34 02 410 13</a>
+          <a href="mailto:responsable.informatique@sodiat.mg"
+            >responsable.informatique@sodiat.mg</a
+          >
+        </div>
+        <div class="tile ref c-4 reveal">
+          <h4>Fabrice Razafindraibe</h4>
+          <div class="role">Chef de projet — AfricaRice & SMA</div>
+          <a href="tel:+261349652012">+261 34 96 520 12</a>
+          <a href="mailto:fabricerazafindraibe@gmail.com"
+            >fabricerazafindraibe@gmail.com</a
+          >
+        </div>
+
+        <!-- CONTACT -->
+        <div
+          class="tile contact c-12 reveal"
+          id="contact"
+          style="margin-top: 44px"
+        >
+          <h2>Une infrastructure à sécuriser ?</h2>
+          <p>
+            Échangeons sur vos besoins en support IT, administration système,
+            exploitation ou refonte réseau.
+          </p>
+          <div class="links">
+            <a href="mailto:aina.anderson@ainaa.tech" class="btn btn-dark"
+              >aina.anderson@ainaa.tech</a
+            >
+            <a href="tel:+261387068690" class="btn btn-light"
+              >☎ +261 38 70 686 90</a
+            >
+            <a href="https://ainaa-portfolio.vercel.app/" class="btn btn-light"
+              >🌐 ainaa-portfolio.vercel.app</a
+            >
+          </div>
+        </div>
+      </main>
+
+      <footer>
+        <span>© 2026 Aina Anderson — Talatamaty, Antananarivo</span>
+        <span class="dot-ok">status : online</span>
+      </footer>
     </div>
-    <a href="mailto:aina.anderson@ainaa.tech" class="btn btn-dark" style="padding:10px 18px;">Contact ✦</a>
-  </nav>
-</header>
 
-<main class="bento">
-
-  <!-- HERO -->
-  <div class="tile hero c-8 reveal">
-    <div class="blob" style="width:260px;height:260px;background:var(--violet);right:-60px;top:-80px;"></div>
-    <div class="blob" style="width:200px;height:200px;background:var(--lime);right:120px;bottom:-120px;opacity:.25;"></div>
-    <div style="position:relative;">
-      <span class="pill"><b></b>En poste chez Harvel-System</span>
-      <h1>Je garde les <span class="hl">infrastructures</span> en ligne, disponibles et sécurisées.</h1>
-      <p>IT Support & SysAdmin basé à Antananarivo, Madagascar. Windows / Linux, Active Directory, réseaux et virtualisation — du poste utilisateur à la salle serveur.</p>
-      <div class="actions">
-        <a href="#exp" class="btn btn-lime">Voir le parcours →</a>
-        <a href="#contact" class="btn btn-light">Me contacter</a>
-      </div>
-    </div>
-  </div>
-
-  <div class="tile me c-4 reveal">
-    <div class="avatar">AA</div>
-    <div>
-      <h2>Aina<br>Anderson</h2>
-      <div class="loc">📍 Talatamaty, Antananarivo</div>
-      <div class="tags"><span>Responsable Exploitation</span><span>SysAdmin</span><span>IT Support</span></div>
-    </div>
-  </div>
-
-  <div class="tile stat bg-lime c-3 reveal"><strong>4+ ans</strong><span>support & infra IT</span></div>
-  <div class="tile stat bg-peach c-3 reveal"><strong>5</strong><span>structures accompagnées</span></div>
-  <div class="tile stat bg-sky c-3 reveal"><strong>Win / Lx</strong><span>environnements administrés</span></div>
-  <div class="tile stat bg-butter c-3 reveal"><strong>M365</strong><span>EntraID · Intune</span></div>
-
-  <!-- ABOUT -->
-  <div class="label reveal" id="about"><span class="n">01</span><h2>Profil</h2></div>
-  <div class="tile about c-7 reveal">
-    <h3>À propos</h3>
-    <p>Depuis plus de quatre ans, mon travail consiste à faire en sorte que tout fonctionne, sans que personne n'ait à s'en soucier. Serveurs, réseaux, postes sous <strong>Windows comme sous Linux</strong> : je les <strong>installe, les entretiens et les sécurise</strong> pour que les équipes puissent avancer sans interruption.</p>
-    <p>Face à une panne, j'aime en comprendre la cause plutôt que de la contourner. Qu'il s'agisse de débloquer un utilisateur ou de monter une nouvelle infrastructure, je suis le dossier de bout en bout, <strong>en autonomie</strong> quand il le faut et <strong>en équipe</strong> le reste du temps.</p>
-  </div>
-  <div class="tile c-5 reveal">
-    <h3>En bref</h3>
-    <div class="kv"><span>Localisation</span><span>Talatamaty, Antananarivo</span></div>
-    <div class="kv"><span>Statut</span><span class="dot-ok">En poste — Harvel-System</span></div>
-    <div class="kv"><span>Systèmes</span><span>Windows / Linux</span></div>
-    <div class="kv"><span>Cloud identité</span><span>EntraID · Intune</span></div>
-    <div class="kv"><span>Virtualisation</span><span>VMware ESXi</span></div>
-    <div class="kv"><span>Site</span><span>ainaa-portfolio.vercel.app</span></div>
-  </div>
-
-  <!-- SKILLS -->
-  <div class="label reveal" id="skills"><span class="n">02</span><h2>Spécialisations</h2></div>
-  <div class="tile skill c-4 reveal">
-    <div class="icon bg-sky">SR</div>
-    <h4>Systèmes & réseaux</h4>
-    <div class="chips">
-      <span class="chip">Administration Windows / Linux</span>
-      <span class="chip">Virtualisation (VMware ESXi, Hyper-V, Proxmox)</span>
-      <span class="chip">Réseaux LAN, WAN, VLAN, TCP/IP, VPN</span>
-      <span class="chip">DNS, DHCP, Active Directory</span>
-      <span class="chip">Sécurité des systèmes et réseaux</span>
-    </div>
-  </div>
-  <div class="tile skill c-4 reveal">
-    <div class="icon bg-peach">AI</div>
-    <h4>Administration & infra</h4>
-    <div class="group"><span class="chip">Serveurs Windows Server / Linux Server</span></div>
-    <div class="group">
-      <span class="chip">Sauvegarde & reprise après sinistre</span>
-      <div class="chips"><span class="chip sub">Veeam B&R</span><span class="chip sub">Ghost Symantec</span></div>
-    </div>
-  </div>
-  <div class="tile skill c-4 reveal">
-    <div class="icon bg-butter">M365</div>
-    <h4>Microsoft 365</h4>
-    <div class="group">
-      <span class="chip">EntraID (ex Azure AD)</span>
-      <div class="chips"><span class="chip sub">Utilisateurs & groupes</span><span class="chip sub">Rôles RBAC</span></div>
-    </div>
-    <div class="group">
-      <span class="chip">Intune</span>
-      <div class="chips"><span class="chip sub">Enrôlement des postes</span><span class="chip sub">MDM/MAM, politiques de sécurité</span></div>
-    </div>
-    <div class="group"><span class="chip">Gestion environnement hybride</span></div>
-  </div>
-
-  <!-- EXPERIENCE -->
-  <div class="label reveal" id="exp"><span class="n">03</span><h2>Expérience</h2></div>
-  <div class="tile job c-12 reveal">
-    <div class="badge" style="background:var(--violet); color:#fff;">HS</div>
-    <div>
-      <div class="date">Août 2026 — Aujourd'hui · <span style="color:#3BB54A;">● en poste</span></div>
-      <h4>Consultant Responsable Exploitation</h4>
-      <div class="org">Harvel-System</div>
-      <ul>
-        <li>Coordination technique des projets et suivi des autres intervenants (planning, échéances, blocages)</li>
-        <li>Revue de code et contrôle qualité avant validation et mise en production</li>
-        <li>Administration des réseaux, serveurs et équipements (routeurs, switches, Wi-Fi), sauvegardes et supervision</li>
-        <li>Sécurité des systèmes : gestion des accès et permissions, protection des données clients</li>
-        <li>Préparation et pilotage des déploiements et mises en production</li>
-        <li>Support technique et interventions à distance ou sur site chez les clients</li>
-        <li>Développement et maintenance d'applications, documentation technique et reporting</li>
-      </ul>
-    </div>
-  </div>
-  <div class="tile job c-6 reveal">
-    <div class="badge bg-lime">GS</div>
-    <div>
-      <div class="date">Avril 2025 — 13 Fév 2026</div>
-      <h4>Technicien de support IT (N1/N2)</h4>
-      <div class="org">Groupe SODIAT S.A</div>
-      <ul>
-        <li>Administration Active Directory : création/suppression de comptes, GPO, gestion des accès</li>
-        <li>Configuration et dépannage des équipements réseau : switches, routeurs, pare-feu</li>
-        <li>Gestion des tickets via GLPI, participation aux projets d'évolution de l'infrastructure</li>
-        <li>Support opérationnel sur environnements virtualisés (VMware ESXi)</li>
-        <li>Support technique N1/N2 : diagnostic, résolution et escalade des incidents</li>
-      </ul>
-    </div>
-  </div>
-  <div class="tile job c-6 reveal">
-    <div class="badge bg-sky">TR</div>
-    <div>
-      <div class="date">Jan 2023 — Sep 2024</div>
-      <h4>Technicien informatique</h4>
-      <div class="org">TRANSRAM SARLU</div>
-      <ul>
-        <li>Mise en place et administration d'un serveur Windows Server, comptes AD, droits et partages réseau</li>
-        <li>Déploiement et maintenance des postes clients Windows</li>
-        <li>Résolution d'incidents liés à l'authentification, aux accès réseau et aux ressources partagées</li>
-      </ul>
-    </div>
-  </div>
-  <div class="tile job c-6 reveal">
-    <div class="badge bg-peach">AR</div>
-    <div>
-      <div class="date">Avril 2022 — Juillet 2022</div>
-      <h4>Junior développeur web — React / Laravel</h4>
-      <div class="org">Org. AfricaRice Madagascar</div>
-      <ul>
-        <li>Application web React (front) / Laravel (back) avec API REST</li>
-        <li>Gestion des bases MySQL et des relations</li>
-        <li>Implémentation de l'authentification et de la gestion des utilisateurs</li>
-      </ul>
-    </div>
-  </div>
-  <div class="tile job c-6 reveal">
-    <div class="badge bg-butter">SMA</div>
-    <div>
-      <div class="date">Oct 2022 — Août 2023</div>
-      <h4>Stagiaire développeur WinDev</h4>
-      <div class="org">Société Municipale d'Assainissement (SMA)</div>
-      <ul>
-        <li>Conception d'un Système d'Information, analyse des besoins et spécifications</li>
-        <li>Modélisation des données et gestion des bases (HFSQL / SQL)</li>
-        <li>Mise en place d'un serveur Ubuntu pour l'hébergement du SI, assistance aux utilisateurs</li>
-      </ul>
-    </div>
-  </div>
-
-  <!-- EDUCATION -->
-  <div class="label reveal" id="edu"><span class="n">04</span><h2>Formation</h2></div>
-  <div class="tile edu c-12 reveal">
-    <div class="yr">2022–23</div>
-    <div style="flex:1; min-width:240px;">
-      <h4>Licence en Informatique</h4>
-      <div class="org">ESMIA Mahamasina</div>
-      <p>Formation axée sur les systèmes et réseaux, avec des bases solides en administration serveurs et en développement web. Acquisition des fondamentaux en infrastructures IT et services réseau.</p>
-    </div>
-  </div>
-
-  <!-- REFERENCES -->
-  <div class="label reveal" id="refs"><span class="n">05</span><h2>Références</h2></div>
-  <div class="tile ref c-4 reveal">
-    <h4>Rado Razafinimanana</h4>
-    <div class="role">Coordonateur SI — Groupe SODIAT</div>
-    <a href="tel:+261383356300">+261 38 33 563 00</a>
-    <a href="mailto:coodonateur.si@sodiat.mg">coodonateur.si@sodiat.mg</a>
-  </div>
-  <div class="tile ref c-4 reveal">
-    <h4>Sitraka Andrianariveloarinosy</h4>
-    <div class="role">Responsable Informatique — Groupe SODIAT</div>
-    <a href="tel:+261340241013">+261 34 02 410 13</a>
-    <a href="mailto:responsable.informatique@sodiat.mg">responsable.informatique@sodiat.mg</a>
-  </div>
-  <div class="tile ref c-4 reveal">
-    <h4>Fabrice Razafindraibe</h4>
-    <div class="role">Chef de projet — AfricaRice & SMA</div>
-    <a href="tel:+261349652012">+261 34 96 520 12</a>
-    <a href="mailto:fabricerazafindraibe@gmail.com">fabricerazafindraibe@gmail.com</a>
-  </div>
-
-  <!-- CONTACT -->
-  <div class="tile contact c-12 reveal" id="contact" style="margin-top:44px;">
-    <h2>Une infrastructure à sécuriser ?</h2>
-    <p>Échangeons sur vos besoins en support IT, administration système, exploitation ou refonte réseau.</p>
-    <div class="links">
-      <a href="mailto:aina.anderson@ainaa.tech" class="btn btn-dark">✉️ aina.anderson@ainaa.tech</a>
-      <a href="tel:+261387068690" class="btn btn-light">☎ +261 38 70 686 90</a>
-      <a href="https://ainaa-portfolio.vercel.app/" class="btn btn-light">🌐 ainaa-portfolio.vercel.app</a>
-    </div>
-  </div>
-
-</main>
-
-<footer>
-  <span>© 2026 Aina Anderson — Talatamaty, Antananarivo</span>
-  <span class="dot-ok">status : online</span>
-</footer>
-
-</div>
-
-<script>
-  const io = new IntersectionObserver(es => es.forEach(e => {
-    if (e.isIntersecting) { e.target.classList.add('in'); io.unobserve(e.target); }
-  }), {threshold: .1});
-  document.querySelectorAll('.reveal').forEach((el, i) => {
-    el.style.transitionDelay = (i % 4) * 60 + 'ms';
-    io.observe(el);
-  });
-</script>
-</body>
+    <script>
+      const io = new IntersectionObserver(
+        (es) =>
+          es.forEach((e) => {
+            if (e.isIntersecting) {
+              e.target.classList.add("in");
+              io.unobserve(e.target);
+            }
+          }),
+        { threshold: 0.1 },
+      );
+      document.querySelectorAll(".reveal").forEach((el, i) => {
+        el.style.transitionDelay = (i % 4) * 60 + "ms";
+        io.observe(el);
+      });
+    </script>
+  </body>
 </html>
